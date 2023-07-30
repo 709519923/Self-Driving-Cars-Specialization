@@ -1,7 +1,44 @@
 # Self-driving Vehicle Algorithm Analysis（各项算法分析）
+<video src='video/load tracking.mp4' width=480/>
+
+<video src='video/motion planner.mp4' width=480/>
+![feature extration](images\car_feature.gif)
+![car_feature.gif](images\car_feature.gif)
+
+
+
+<img src="images\car_feature.gif" style="zoom: 100%" />
 
 [TOC]
-
+- [Self-driving Vehicle Algorithm Analysis（各项算法分析）](#self-driving-vehicle-algorithm-analysis（各项算法分析）)
+  - [前言](#前言)
+  - [一、运动控制](#一、运动控制)
+    - [1.1 纵向控制算法](#11-纵向控制算法)
+    - [1.2 横向控制算法](#12-横向控制算法)
+      - [1.2.1 Pure pursuit（后轴定位）](#121-pure-pursuit（后轴定位）)
+      - [1.2.2 Stanley](#122-stanley)
+    - [1.3 控制算法代码](#13-控制算法代码)
+  - [二、位姿估计与定位](#二、位姿估计与定位)
+    - [2.1 卡尔曼滤波](#21-卡尔曼滤波)
+    - [2.2 Error-State 卡尔曼滤波](#22-error-state-卡尔曼滤波)
+    - [2.3 传感器](#23-传感器)
+    - [2.4 姿态估计代码](#24-姿态估计代码)
+      - [2.4.1轨迹预测（EKF-Lab）](#241轨迹预测（ekf-lab）)
+      - [2.4.2车辆路面状态估计（ES-EKF-Lab）](#242车辆路面状态估计（es-ekf-lab）)
+  - [三、视觉感知](#三、视觉感知)
+    - [3.1 坐标转换](#31-坐标转换)
+    - [3.2 图像滤波（略）](#32-图像滤波（略）)
+    - [3.3 相机标定](#33-相机标定)
+    - [3.3 图像真实坐标计算](#33-图像真实坐标计算)
+    - [3.4 神经网络（模型训练，物体识别，语义分割）](#34-神经网络（模型训练，物体识别，语义分割）)
+    - [3.5 视觉里程计定位代码](#35-视觉里程计定位代码)
+  - [四、运动规划](#四、运动规划)
+    - [4.1 地图构建](#41-地图构建)
+    - [4.2 路径规划（Route planning）](#42-路径规划（route-planning）)
+    - [4.3 行为规划（behavior planning)](#43-行为规划（behavior-planning)
+    - [4.4 运动预测(轨迹预测、碰撞预测)](#44-运动预测轨迹预测、碰撞预测)
+    - [4.5 局部路径规划](#45-局部路径规划)
+    - [4.6 运动规划代码](#46-运动规划代码)
 
 
 ## 前言
