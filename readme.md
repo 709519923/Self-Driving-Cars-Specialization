@@ -1,10 +1,10 @@
 # Self-driving Vehicle Algorithm Analysis（各项算法分析）
 
-![car_feature.gif](video/car_feature.gif )
-
 <img src="video/car_feature.gif" width="480" height="360">
 
-<video src='video/load tracking.mp4' width=360/> | <video src='video/load motion planner.mp4' width=360/>
+<video src='video/load tracking.mp4' width=360/> 
+
+<video src='video/load motion planner.mp4' width=360/>
 
 
 
