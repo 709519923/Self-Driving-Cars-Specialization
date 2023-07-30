@@ -1,7 +1,7 @@
 # Self-driving Vehicle Algorithm Analysis（各项算法分析）
 
 
-![car_feature.gif](images/car_feature.gif)
+![car_feature.gif](video/car_feature.gif)
 
 
 
