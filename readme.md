@@ -5,7 +5,11 @@
 https://github.com/709519923/Self-Driving-Cars-Specialization/assets/50516199/4f6321ce-de95-408a-b53b-d505754c2d0f.mp4
 
 特征提取（feature extration）：
+
 <img src="video/car_feature.gif" width="480" height="360">
+
+
+
 运动规划（motion planning）：
 
 https://github.com/709519923/Self-Driving-Cars-Specialization/assets/50516199/bae066ec-d932-40d5-b714-59b695f60aea.mp4
