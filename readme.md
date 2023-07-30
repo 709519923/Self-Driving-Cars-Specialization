@@ -1,6 +1,9 @@
 # Self-driving Vehicle Algorithm Analysis（各项算法分析）
 
 <img src="video/car_feature.gif" width="480" height="360">
+
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](video/load tracking.mp4 "Now in Android: 55")
+
 [![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](video/load tracking.mp4)
 [![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](video/load motion planner.mp4)
 <video src='video/load tracking.mp4' width=360/> 
