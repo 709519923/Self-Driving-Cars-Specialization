@@ -1,17 +1,11 @@
 # Self-driving Vehicle Algorithm Analysis（各项算法分析）
 
+路面跟踪（load tracking）：
+https://github.com/709519923/Self-Driving-Cars-Specialization/assets/50516199/4f6321ce-de95-408a-b53b-d505754c2d0f
+特征提取（feature extration）：
 <img src="video/car_feature.gif" width="480" height="360">
-
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](video/load tracking.mp4 "Now in Android: 55")
-
-[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](video/load tracking.mp4)
-[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](video/load motion planner.mp4)
-<video src='video/load tracking.mp4' width=360/> 
-
-<video src='video/load motion planner.mp4' width=360/>
-
-
-
+运动规划（motion planning）：
+https://github.com/709519923/Self-Driving-Cars-Specialization/assets/50516199/bae066ec-d932-40d5-b714-59b695f60aea
 
 [TOC]
 - [Self-driving Vehicle Algorithm Analysis（各项算法分析）](#self-driving-vehicle-algorithm-analysis（各项算法分析）)
@@ -43,8 +37,6 @@
     - [4.4 运动预测(轨迹预测、碰撞预测)](#44-运动预测轨迹预测、碰撞预测)
     - [4.5 局部路径规划](#45-局部路径规划)
     - [4.6 运动规划代码](#46-运动规划代码)
-
-
 ## 前言
 
 由于计算机视觉方向的重大突破，计算能力的提高，近十年来，自动驾驶方向成为了其衍生出来的一个研究分支。自动驾驶火于计算机视觉，但又不仅仅局限在计算机视觉。本文讲从汽车的运动控制，位置与状态的估计，汽车感知以及路径规划四个方面讲述所采用到的算法，并结合代码便于理解。
