@@ -555,7 +555,7 @@ var_lidar = 36  ## Lidar误差大，需要降低权重
 $$
 \left[\begin{array}{c}X_c\\Y_c\\Z_c\\1\end{array}\right] = \left[\begin{array}{ccc}R_{11}&R_{12}&R_{13}&t_1\\R_{21}&R_{22}&R_{23}&t_2\\R_{31}&R_{32}&R_{33}&t_3\\0&0&0&1\end{array}\right]\left[\begin{array}{c}X_w\\Y_w\\Z_w\\1\end{array}\right]
  = 
- \left[\begin{array}{cc}R&t\\0^T&1\end{array}\right]\left[\begin{array}{c}X_w\\Y_w\\Z_w\\1\end{array}\right] = T(相机内参)\left[\begin{array}{c}X_w\\Y_w\\Z_w\\1\end{array}\right]
+ \left[\begin{array}{cc}R&t\\0^T&1\end{array}\right]\left[\begin{array}{c}X_w\\Y_w\\Z_w\\1\end{array}\right] = T(相机外参)\left[\begin{array}{c}X_w\\Y_w\\Z_w\\1\end{array}\right]
 $$
 
 
@@ -587,11 +587,17 @@ P通过相机的标定获得（camera calibration）
 
 ![image-20230724184322258](images/image-20230724184322258.png)
 
-由于P=KT，可以将P矩阵进行QR分解即可。
+这里解出$$p_{xy}$$之后，由于P=KT，可以将P矩阵进行RQ分解即可：
 
-QR分解例子：
+![image-20230809015607471](images\image-20230809015607471.png)
 
-[QR分解_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ZY411q75R/?spm_id_from=333.337.search-card.all.click&vd_source=24be587ba4307f8496d0a182b0491855)
+
+
+RQ分解例子：
+
+[RQ分解_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1ZY411q75R/?spm_id_from=333.337.search-card.all.click&vd_source=24be587ba4307f8496d0a182b0491855)
+
+[摄像机矩阵的分解，求解内外参矩阵（Matlab实现）_求相机外参 matlab_leaf_csdn的博客-CSDN博客](https://blog.csdn.net/weixin_43956164/article/details/119241462)
 
 ### 3.3 图像真实坐标计算
 
@@ -1094,7 +1100,7 @@ A*算法：
 
 对于每个节点的评估加入启发式函数（heuristic function）,启发式函数是该节点与终点的一个函数联系，如果不加，就退化为Dijkastra
 
-### 4.3 行为规划（behavior planning)
+### 4.3 行为规划（behavior planning)--决策
 
 路径规划只是规划到了大路，对于具体的行车状况细节并不关心。考虑行车具体状况的规划叫做行为规划（behavior planning）
 
