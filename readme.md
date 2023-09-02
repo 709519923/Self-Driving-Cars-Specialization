@@ -187,20 +187,21 @@ if yaw_diff > np.pi:
 
 # 2. calculate crosstrack error
 current_xy = np.array([x, y])
+#点到直线的距离，这里使用点到waypoint的最短距离代替，求近似值
 crosstrack_error = np.min(np.sum((current_xy - np.array(waypoints)[:, :2])**2, axis=1))
+#判断正负号
+yaw_cross_track = np.arctan2(y-waypoints[0][1], x-waypoints[0][0])
+yaw_path2ct = yaw_path - yaw_cross_track
+if yaw_path2ct > np.pi:
+    yaw_path2ct -= 2 * np.pi
+if yaw_path2ct < - np.pi:
+    yaw_path2ct += 2 * np.pi
+if yaw_path2ct > 0:
+    crosstrack_error = abs(crosstrack_error)
+else:
+    crosstrack_error = - abs(crosstrack_error)
 
-#yaw_cross_track = np.arctan2(y-waypoints[0][1], x-waypoints[0][0])
-#yaw_path2ct = yaw_path - yaw_cross_track
-#if yaw_path2ct > np.pi:
-#    yaw_path2ct -= 2 * np.pi
-#if yaw_path2ct < - np.pi:
-#    yaw_path2ct += 2 * np.pi
-#if yaw_path2ct > 0:
-#    crosstrack_error = abs(crosstrack_error)
-#else:
-#    crosstrack_error = - abs(crosstrack_error)
-#
-#yaw_diff_crosstrack = np.arctan(k_e * crosstrack_error / (k_v + v))
+yaw_diff_crosstrack = np.arctan(k_e * crosstrack_error / (k_v + v))
 
 #print(crosstrack_error, yaw_diff, yaw_diff_crosstrack)
 #print(crosstrack_error, yaw_diff, yaw_diff_crosstrack)
